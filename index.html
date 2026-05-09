@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CataLoop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        canvas: 'hsl(30, 20%, 98%)',
+                        surface: 'hsl(0, 0%, 100%)',
+                        brand: 'hsl(185, 75%, 25%)',
+                        accent: 'hsl(15, 85%, 65%)',
+                        brandLight: 'hsl(185, 75%, 95%)',
+                        dark: 'hsl(220, 15%, 12%)',
+                        borderCanvas: 'hsl(30, 20%, 88%)',
+                        borderSurface: 'hsl(0, 0%, 90%)',
+                        borderDark: 'hsl(220, 15%, 22%)'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        subtle: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        hover: '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04)',
+                        glow: '0 0 20px rgba(16, 111, 123, 0.2)',
+                        glowAccent: '0 0 20px rgba(240, 130, 98, 0.2)'
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body class="antialiased overflow-x-hidden relative">
+
+    <div class="bg-blob-1"></div>
+    <div class="bg-blob-2"></div>
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img src="assets/images/logo-wide.png" alt="CataLoop Logo" class="h-14 object-contain"
+                    onerror="this.src='placeholder.jpg'">
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="#features" class="hover:text-gray-900 transition-colors">Features</a>
+                <a href="#pricing" class="hover:text-gray-900 transition-colors">Pricing</a>
+                <a href="#" class="hover:text-gray-900 transition-colors">Integration</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#"
+                    class="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-800 transition-all">Start
+                    for Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center relative z-10">
+        <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-borderSurface shadow-sm mb-8">
+            <div class="flex gap-1">
+                <i data-lucide="star" class="w-3 h-3 text-accent fill-accent"></i>
+                <i data-lucide="star" class="w-3 h-3 text-accent fill-accent"></i>
+                <i data-lucide="star" class="w-3 h-3 text-accent fill-accent"></i>
+            </div>
+            <span class="text-xs font-semibold text-gray-700">The best cataloging platform for crafters.</span>
+        </div>
+
+        <h1
+            class="font-heading text-5xl md:text-7xl font-bold tracking-tight mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">
+            CataLoop<br class="hidden md:block" /> <span
+                class="font-heading text-5xl md:text-6xl font-medium tracking-tight mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">The
+                future of handmade
+                commerce</span>
+        </h1>
+
+        <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Centralize, enhance, and share your crochet and knitting products in seconds from any device.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+            <button
+                class="w-full sm:w-auto gradient-bg text-brand px-8 py-3.5 rounded-xl text-sm font-bold hover:opacity-90 shadow-glow transition-all flex items-center justify-center gap-2">
+                Try CataLoop for Free</button>
+
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-5xl mx-auto">
+
+            <div
+                class="w-[280px] h-[580px] bg-white rounded-[3rem] border-[10px] border-gray-900 shadow-2xl overflow-hidden flex flex-col transform md:-rotate-2 hover:-translate-y-2 transition-transform duration-300 relative shrink-0">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-3xl z-30">
+                </div>
+                <div class="w-full h-10 bg-white flex items-center justify-between px-5 pt-1 z-20 shrink-0">
+                    <span class="text-[10px] font-bold text-gray-800">9:41</span>
+                    <div class="flex items-center gap-1">
+                        <i data-lucide="wifi" class="w-3 h-3 text-gray-800"></i>
+                        <i data-lucide="battery-full" class="w-4 h-4 text-gray-800"></i>
+                    </div>
+                </div>
+                <div class="px-5 py-3 flex items-center justify-between bg-white border-b border-borderCanvas shrink-0">
+                    <span class="font-heading font-bold text-xl text-brand tracking-tight">Cataloop</span>
+                    <i data-lucide="search" class="w-5 h-5 text-gray-600"></i>
+                </div>
+                <div class="flex-1 p-3 bg-canvas overflow-hidden flex flex-col">
+                    <h3 class="font-bold text-sm mb-3">My Catalog</h3>
+                    <div class="flex-1 rounded-xl overflow-hidden shadow-sm bg-white">
+                        <img src="assets/images/app-grid.png" class="w-full h-full object-cover"
+                            onerror="this.src='placeholder.jpg'">
+                    </div>
+                </div>
+                <div
+                    class="h-16 bg-white border-t border-borderCanvas flex justify-around items-center px-4 pb-2 shrink-0">
+                    <i data-lucide="home" class="w-5 h-5 text-brand"></i>
+                    <i data-lucide="grid" class="w-5 h-5 text-gray-400"></i>
+                    <i data-lucide="heart" class="w-5 h-5 text-gray-400"></i>
+                    <i data-lucide="user" class="w-5 h-5 text-gray-400"></i>
+                </div>
+            </div>
+
+            <div
+                class="w-[280px] h-[580px] bg-white rounded-[3rem] border-[10px] border-gray-900 shadow-2xl overflow-hidden flex flex-col transform md:rotate-2 md:translate-y-8 hover:-translate-y-2 transition-transform duration-300 relative shrink-0">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-3xl z-30">
+                </div>
+                <div
+                    class="w-full h-10 bg-transparent absolute top-0 left-0 flex items-center justify-between px-5 pt-1 z-20">
+                    <span class="text-[10px] font-bold text-white drop-shadow-md">9:41</span>
+                    <div class="flex items-center gap-1 text-white drop-shadow-md">
+                        <i data-lucide="wifi" class="w-3 h-3"></i>
+                        <i data-lucide="battery-full" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div
+                    class="absolute top-10 left-4 z-20 w-8 h-8 bg-black/20 backdrop-blur rounded-full flex items-center justify-center">
+                    <i data-lucide="chevron-left" class="w-5 h-5 text-white"></i>
+                </div>
+                <div class="flex-1 bg-white flex flex-col overflow-hidden">
+                    <div class="w-full h-[55%] bg-canvas shrink-0 relative">
+                        <img src="assets/images/app-product.png" class="w-full h-full object-cover"
+                            onerror="this.src='placeholder.jpg'">
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 bg-white">
+                        <h4 class="font-heading font-bold text-lg text-gray-900 leading-tight mb-1">Handmade Amigurumi
+                        </h4>
+                        <span class="text-brand font-bold text-xl mb-2">₱1,200</span>
+                        <p class="text-xs text-gray-500 mb-4 leading-relaxed line-clamp-3">Beautiful intricate design
+                            made from high-quality local yarn. AI-enhanced photo highlights the premium texture.</p>
+                        <button
+                            class="w-full bg-brand text-white py-3 rounded-xl text-sm font-semibold mt-auto shadow-sm">Add
+                            to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="features" class="py-24 px-6 max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16">
+            <h2 class="font-heading text-3xl md:text-5xl font-bold text-gray-900 mb-4">Leave messy feeds behind and look
+                like a pro.</h2>
+
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <div
+                class="lg:col-span-1 bg-surface border border-borderSurface rounded-3xl p-8 shadow-subtle flex flex-col">
+                <div class="w-10 h-10 bg-brandLight text-brand rounded-lg flex items-center justify-center mb-6">
+                    <i data-lucide="layout-grid" class="w-5 h-5"></i>
+                </div>
+                <h3 class="font-heading text-xl font-bold text-gray-900 mb-2">Beautiful Digital Catalogs</h3>
+                <p class="text-sm text-gray-500 mb-8 leading-relaxed">Automatically organize your handmade pieces into a
+                    stunning storefront. No more endless scrolling for customers.</p>
+
+                <div
+                    class="bg-canvas border border-borderCanvas rounded-2xl p-4 flex-1 flex flex-col gap-3 relative overflow-hidden">
+                    <div class="bg-white rounded-xl shadow-sm border border-borderSurface p-3 flex gap-3">
+                        <div class="w-12 h-12 bg-gray-100 rounded-lg shrink-0 flex items-center justify-center"><i
+                                data-lucide="image" class="w-4 h-4 text-gray-400"></i></div>
+                        <div>
+                            <div class="h-2 w-20 bg-gray-200 rounded mb-2 mt-1"></div>
+                            <div class="h-2 w-12 bg-brandLight rounded"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm border border-borderSurface p-3 flex gap-3 opacity-70">
+                        <div class="w-12 h-12 bg-gray-100 rounded-lg shrink-0 flex items-center justify-center"><i
+                                data-lucide="image" class="w-4 h-4 text-gray-400"></i></div>
+                        <div>
+                            <div class="h-2 w-24 bg-gray-200 rounded mb-2 mt-1"></div>
+                            <div class="h-2 w-16 bg-brandLight rounded"></div>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-canvas to-transparent"></div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-surface border border-borderSurface rounded-3xl p-8 shadow-subtle">
+                    <h3 class="font-heading text-lg font-bold text-gray-900 mb-2">Built-in AI Photo Studio</h3>
+                    <p class="text-sm text-gray-500 mb-6">Enhance yarn textures and fix lighting automatically.</p>
+                    <div class="h-24 bg-canvas rounded-xl border border-borderCanvas flex items-center justify-center">
+                        <div
+                            class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg shadow-sm border border-borderSurface">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-accent"></i>
+                            <span class="text-xs font-semibold">Enhancing photo...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface border border-borderSurface rounded-3xl p-8 shadow-subtle">
+                    <h3 class="font-heading text-lg font-bold text-gray-900 mb-2">Professional Storefront</h3>
+                    <p class="text-sm text-gray-500 mb-6">A dedicated space for customers to browse.</p>
+                    <div
+                        class="h-24 bg-canvas rounded-xl border border-borderCanvas flex items-center justify-center relative overflow-hidden">
+                        <div
+                            class="absolute inset-x-4 bottom-[-10px] h-20 bg-white border border-borderSurface rounded-t-xl shadow-sm">
+                            <div class="h-4 border-b border-borderSurface flex items-center px-2">
+                                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface border border-borderSurface rounded-3xl p-8 shadow-subtle">
+                    <h3 class="font-heading text-lg font-bold text-gray-900 mb-2">Grow Your Brand</h3>
+                    <p class="text-sm text-gray-500 mb-6">Built to empower beginner Philippine crafters.</p>
+                    <div class="h-24 bg-canvas rounded-xl border border-borderCanvas flex items-center justify-center">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-brand"></i>
+                    </div>
+                </div>
+
+                <div class="bg-surface border border-borderSurface rounded-3xl p-8 shadow-subtle">
+                    <h3 class="font-heading text-lg font-bold text-gray-900 mb-2">Seamless Sharing</h3>
+                    <p class="text-sm text-gray-500 mb-6">Distribute links in seconds via any platform.</p>
+                    <div class="h-24 bg-canvas rounded-xl border border-borderCanvas flex items-center justify-center">
+                        <div
+                            class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-borderSurface">
+                            <i data-lucide="link" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-xs font-medium text-gray-600">cataloop.app/store</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-white border-y border-borderCanvas">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">CataLoop users share their
+                catalog Success</h2>
+            <p class="text-gray-500 mb-12">Hear directly from artisans who transformed their shops.</p>
+
+            <div
+                class="bg-canvas border border-borderCanvas rounded-3xl p-8 text-left shadow-sm flex flex-col sm:flex-row gap-6 items-center">
+                <div class="flex flex-col gap-2 shrink-0">
+                    <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                    <div class="w-12 h-12 bg-brand rounded-full -mt-4 border-2 border-canvas"></div>
+                    <div class="w-12 h-12 bg-accent rounded-full -mt-4 border-2 border-canvas"></div>
+                </div>
+                <div>
+                    <p class="text-gray-700 italic mb-4">"CataLoop completely changed how I manage my crochet business.
+                        The AI photo studio saves me hours, and my customers love the clean storefront."</p>
+                    <div class="text-sm font-bold text-gray-900">Maria Santos</div>
+                    <div class="text-xs text-gray-500">Crochet Artist, Manila</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-7xl mx-auto text-center">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-12">Your catalog wherever<br />you need
+            it</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="bg-surface border border-borderSurface rounded-3xl p-8 shadow-subtle pt-16 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-brand"></div>
+                <h3 class="font-heading font-bold text-lg mb-2">Mobile Ready</h3>
+                <p class="text-sm text-gray-500">Manage your entire shop straight from your phone.</p>
+            </div>
+            <div
+                class="bg-surface border border-borderSurface rounded-3xl p-8 shadow-subtle pt-16 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gray-900"></div>
+                <h3 class="font-heading font-bold text-lg mb-2">AI Powered</h3>
+                <p class="text-sm text-gray-500">Built-in smart tools to enhance every single product.</p>
+            </div>
+            <div
+                class="bg-surface border border-borderSurface rounded-3xl p-8 shadow-subtle pt-16 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-accent"></div>
+                <h3 class="font-heading font-bold text-lg mb-2">Instant Sharing</h3>
+                <p class="text-sm text-gray-500">Generate links to specific products instantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-[#0a0a0b] text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">CataLoop Pricing</h2>
+                <p class="text-gray-400">Capture, organize, and share your handmade products.</p>
+
+                <div class="mt-8 inline-flex bg-gray-900 p-1 rounded-full border border-gray-800">
+                    <button class="px-6 py-1.5 rounded-full bg-white text-black text-sm font-semibold">Monthly</button>
+                    <button
+                        class="px-6 py-1.5 rounded-full text-gray-400 text-sm font-semibold hover:text-white transition">Yearly</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white text-gray-900 rounded-[2rem] p-8 flex flex-col">
+                    <h3 class="text-xl font-bold mb-1">Starter</h3>
+                    <p class="text-xs text-gray-500 mb-6 border-b border-gray-100 pb-4">Perfect for hobbyists starting
+                        to organize their creations.</p>
+
+                    <div class="mb-6">
+                        <span class="text-gray-400 text-2xl font-medium">₱</span><span
+                            class="font-heading text-5xl font-bold">0</span>
+                        <span class="text-gray-500 text-xs font-semibold">/Month</span>
+                    </div>
+
+                    <button
+                        class="w-full py-3 rounded-xl bg-gray-100 text-gray-900 font-semibold hover:bg-gray-200 transition-colors mb-8">Free</button>
+
+                    <ul class="space-y-4 flex-grow">
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-gray-400 shrink-0"></i> Up to 50 catalog items</li>
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-gray-400 shrink-0"></i> Basic image cropping</li>
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-gray-400 shrink-0"></i> Standard shareable links</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white text-gray-900 rounded-[2rem] p-8 flex flex-col border-[3px] border-brand shadow-[0_0_40px_rgba(16,111,123,0.3)] relative transform md:-translate-y-4">
+                    <div
+                        class="absolute top-6 right-6 bg-brand/10 text-brand px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Popular</div>
+                    <h3 class="text-xl font-bold mb-1">Plus</h3>
+                    <p class="text-xs text-gray-500 mb-6 border-b border-gray-100 pb-4">For serious artisans who need AI
+                        tools to stand out.</p>
+
+                    <div class="mb-6">
+                        <span class="text-gray-400 text-2xl font-medium">₱</span><span
+                            class="font-heading text-5xl font-bold">30</span>
+                        <span class="text-gray-500 text-xs font-semibold">/Month</span>
+                    </div>
+
+                    <button
+                        class="w-full py-3 rounded-xl gradient-bg text-brand font-bold shadow-glow hover:opacity-90 transition-all mb-8">Get
+                        Now</button>
+
+                    <ul class="space-y-4 flex-grow">
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-brand shrink-0"></i> Unlimited catalog items</li>
+                        <li class="flex items-start gap-3 text-sm font-bold text-gray-900"><i data-lucide="check"
+                                class="w-4 h-4 text-brand shrink-0"></i> 100 AI Enhancements / mo</li>
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-brand shrink-0"></i> Social media sync</li>
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-brand shrink-0"></i> Custom link domains</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white text-gray-900 rounded-[2rem] p-8 flex flex-col">
+                    <h3 class="text-xl font-bold mb-1">Pro</h3>
+                    <p class="text-xs text-gray-500 mb-6 border-b border-gray-100 pb-4">For established shops managing
+                        high volume.</p>
+
+                    <div class="mb-6">
+                        <span class="text-gray-400 text-2xl font-medium">₱</span><span
+                            class="font-heading text-5xl font-bold">99</span>
+                        <span class="text-gray-500 text-xs font-semibold">/Month</span>
+                    </div>
+
+                    <button
+                        class="w-full py-3 rounded-xl bg-gray-100 text-gray-900 font-semibold hover:bg-gray-200 transition-colors mb-8">Get
+                        Now</button>
+
+                    <ul class="space-y-4 flex-grow">
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-gray-400 shrink-0"></i> Everything in Plus</li>
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-gray-400 shrink-0"></i> Unlimited AI Enhancements</li>
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-gray-400 shrink-0"></i> Priority support</li>
+                        <li class="flex items-start gap-3 text-sm font-medium text-gray-700"><i data-lucide="check"
+                                class="w-4 h-4 text-gray-400 shrink-0"></i> Analytics dashboard</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-3xl mx-auto">
+        <h2 class="font-heading text-3xl font-bold text-center mb-10 text-gray-900">Frequently asked<br />Questions &
+            Answer</h2>
+
+        <div class="space-y-4">
+            <div class="border border-borderSurface rounded-2xl p-6 bg-white shadow-sm">
+                <div class="flex justify-between items-center font-bold text-gray-900">
+                    How does the AI photo enhancement work? <i data-lucide="minus" class="w-4 h-4 text-gray-400"></i>
+                </div>
+                <p class="text-sm text-gray-500 mt-4 leading-relaxed">Our AI is specifically trained on crochet and
+                    knitting textures. It automatically brightens your photo, removes distracting backgrounds, and
+                    sharpens the intricate details of your yarn.</p>
+            </div>
+            <div
+                class="border border-borderSurface rounded-2xl p-6 bg-surface flex justify-between items-center font-bold text-gray-900 hover:bg-gray-50 cursor-pointer transition">
+                Can I import from Facebook? <i data-lucide="plus" class="w-4 h-4 text-gray-400"></i>
+            </div>
+            <div
+                class="border border-borderSurface rounded-2xl p-6 bg-surface flex justify-between items-center font-bold text-gray-900 hover:bg-gray-50 cursor-pointer transition">
+                What is a digital storefront? <i data-lucide="plus" class="w-4 h-4 text-gray-400"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-24 px-6">
+        <div class="max-w-5xl mx-auto bg-[#0a0a0b] rounded-[3rem] p-16 text-center text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+                style="background-image: radial-gradient(circle at 50% 100%, theme('colors.brand'), transparent 50%);">
+            </div>
+            <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6 relative z-10">Try CataLoop for free and let
+                AI<br />capture and organize</h2>
+            <p class="text-gray-400 mb-8 relative z-10 text-sm">A dedicated e-commerce platform for local crochet and
+                knitting artisans.</p>
+            <button
+                class="bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition relative z-10">Start
+                for free &rarr;</button>
+        </div>
+    </section>
+
+    <footer class="border-t border-borderCanvas py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+            <div class="max-w-xs">
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="assets/images/logo.jpg" alt="CataLoop" class="w-8 h-8 object-contain rounded bg-white"
+                        onerror="this.src='placeholder.jpg'">
+                    <span class="font-heading font-bold text-lg text-gray-900">CataLoop</span>
+                </div>
+                <p class="text-gray-500 text-xs">Empowering beginner Philippine crafters with professional e-commerce
+                    and cataloging tools.</p>
+            </div>
+
+            <div class="flex gap-16 text-sm">
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-brand">Features</a></li>
+                        <li><a href="#" class="hover:text-brand">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-brand">About us</a></li>
+                        <li><a href="#" class="hover:text-brand">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
